@@ -180,7 +180,7 @@ app.put('/api/syllabus/:syllabusId', function(req, res){
                 res.status(200).send({"message":"updated succcessfully."});
             }
             else {
-                res.status(500).send({"Message":"Internal server error."});
+                res.status(403).send({"Message":"No access."});
             }
         });
     })
@@ -198,7 +198,7 @@ app.delete('/api/syllabus/:syllabusId', function(req, res){
                 res.status(204).send(result);
             }
             else {
-                res.status(500).send({"Message":"Internal server error."});
+                res.status(403).send({"Message":"No access."});
             }
         });
     })
@@ -216,7 +216,7 @@ app.get('/api/syllabus/:syllabusId', function(req, res){
                 res.status(200).send(result);
             }
             else {
-                res.status(500).send({"Message":"Internal server error."});
+                res.status(403).send({"Message":"No access."});
             }
         });
     })
